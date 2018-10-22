@@ -3,11 +3,7 @@
 </template>
 <script>
   export default {
-    data() {
-        return {
-          titulo: 'Lista de Tareas'
-        }
-      }
+   props: ['titulo']
   }
 </script>
 <style>

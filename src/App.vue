@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
    <div class="jumbotron">
-     <Titulo></Titulo>
+     <titulo v-bind:titulo="titulo"></titulo>
    </div>
   </div>
 </template>
@@ -15,6 +15,7 @@ export default {
   },
   data() {
     return {
+      titulo : "Task List"
     }
   }
 }
