@@ -4,7 +4,7 @@
       class="form-control" v-on:keyup:keyup.enter="addNewTask"/>
     <span class="input-group-btn">
       <button type="button"
-      v-on:click="agregarTarea"
+      v-on:click="addNewTask"
       class="btn btn-primary"> Add </button>
     </span>
   </div>
@@ -19,6 +19,7 @@
     props: ['tasks'], //asi se recibe la variable enviada en v-on:tasks
     methods: {
       addNewTask() {
+        console.log("Add Task");
         var text = this.newTask.trim();
         if(text) {
           this.tasks.push({

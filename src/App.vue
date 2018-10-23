@@ -5,6 +5,7 @@
     <titulo :titulo="titulo"></titulo>
      <!-- <nueva-tarea v-bind:tasks="tasks"></nueva-tarea> -->
      <nueva-tarea :tasks="tasks"></nueva-tarea>
+     <lista-tareas :tasks="tasks"></lista-tareas>
    </div>
   </div>
 </template>
@@ -13,11 +14,15 @@
 
 import Titulo from './TituloCompoment';
 import NuevaTarea from './NewTaskComponent'; // Anñadirlo a la lista de componente
+//Agreando el componente de lista de tareas
+import ListaTareas from './ListaTareasComponent';
+
 export default {
   components: {
     Titulo,
-    NuevaTarea //Ahora voy a pasarlo al componente, si es CammelCase <cammel-case></cammel-case> en este caso es
+    NuevaTarea, //Ahora voy a pasarlo al componente, si es CammelCase <cammel-case></cammel-case> en este caso es
   //<nueva-tarea></nueva-tarea>
+    ListaTareas
   },
   data() {
     return {

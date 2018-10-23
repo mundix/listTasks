@@ -6,6 +6,3 @@
    props: ['titulo']
   }
 </script>
-<style>
-
-</style>
