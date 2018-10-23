@@ -14,7 +14,7 @@
    props: ['tasks'],
    methods: {
      borrarTarea(index) {
-
+       this.tasks.splice(index,1);
      }
    }
   }

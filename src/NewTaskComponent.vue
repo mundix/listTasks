@@ -1,7 +1,7 @@
 <template>
   <div class="input-group">
     <input type="text" placeholder="Write a new Task" v-model="newTask"
-      class="form-control" v-on:keyup:keyup.enter="addNewTask"/>
+      class="form-control" v-on:keyup.enter="addNewTask"/>
     <span class="input-group-btn">
       <button type="button"
       v-on:click="addNewTask"
