@@ -1,8 +1,10 @@
 <template>
   <div id="app" class="container">
    <div class="jumbotron">
-     <titulo v-bind:titulo="titulo"></titulo>
-     <nueva-tarea v-bind:tasks="tasks"></nueva-tarea>
+     <!-- <titulo v-bind:titulo="titulo"></titulo> -->
+    <titulo :titulo="titulo"></titulo>
+     <!-- <nueva-tarea v-bind:tasks="tasks"></nueva-tarea> -->
+     <nueva-tarea :tasks="tasks"></nueva-tarea>
    </div>
   </div>
 </template>
@@ -19,7 +21,7 @@ export default {
   },
   data() {
     return {
-      titulo : "Task List",
+      titulo : "* Task List *",
       tasks : [
         {
           text: 'Learn Vue.js',
