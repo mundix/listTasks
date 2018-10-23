@@ -2,7 +2,9 @@
   <div id="app" class="container">
    <div class="jumbotron">
      <!-- <titulo v-bind:titulo="titulo"></titulo> -->
-    <titulo :titulo="titulo"></titulo>
+    <!-- <titulo :titulo="titulo"></titulo> -->
+    <titulo> </titulo>
+    <!-- Sin pasar valor a titulo cogera el valor default en el componente -->
      <!-- <nueva-tarea v-bind:tasks="tasks"></nueva-tarea> -->
      <nueva-tarea :tasks="tasks"></nueva-tarea>
      <lista-tareas :tasks="tasks"></lista-tareas>
