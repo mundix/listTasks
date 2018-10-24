@@ -9,9 +9,11 @@
      <!-- <nueva-tarea v-bind:tasks="tasks"></nueva-tarea> -->
      <!-- incrementarContador="NumTareas+= $event" event es e segundo parametros al momento -->
      <!-- this.$emit('incrementarContador',1); en este caso event es 1 -->
-     <nueva-tarea :tasks="tasks" v-on:incrementarContador="NumTareas+= $event"></nueva-tarea>
-    <!-- Hay otra forma  -->
-    <!-- <nueva-tarea :tasks="tasks" ></nueva-tarea> -->
+     <!-- <nueva-tarea :tasks="tasks" v-on:incrementarContador="NumTareas+= $event"></nueva-tarea> -->
+    <!-- Hay otra forma  enviadole nuevaTarea coo una proiedad contador -->
+    <nueva-tarea :tasks="tasks" :actualizarContador="actualizarContador"></nueva-tarea>
+    <!-- y se agrga en la lista de props de neva tareas component -->
+
 
      <lista-tareas :tasks="tasks"></lista-tareas>
    </div>
@@ -55,6 +57,11 @@ export default {
         },
       ]
     }
+  },
+  methods: {
+      actualizarContador() {
+        this.NumTareas ++;
+      }
   }
 }
 </script>
