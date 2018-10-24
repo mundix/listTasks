@@ -16,11 +16,9 @@
         newTask: ''
       }
     },
-    props: ['tasks','actualizarContador'], //asi se recibe la variable enviada en v-on:tasks
-    //se agrgo actualizarContador para poder enviar la variable al padre desde aqui
+    props: ['tasks','actualizarContador'],
     methods: {
       addNewTask() {
-
         var text = this.newTask.trim();
 
         if(text) {
@@ -28,13 +26,9 @@
             text: text,
             finished:false
           });
-          // Este es el primer metood para pasar agumentos al padre
-          // this.$emit('incrementarContador',1);
           this.actualizarContador()
         }
         this.newTask = '';
-        //if(text)
-
       }
     }
   }
