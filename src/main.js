@@ -3,8 +3,17 @@ import App from './App.vue'
 
 // Cramos un Bus como una instancia de Vue usando export
 
-export var bus = new Vue(); //un Bus de eventos y monitorear lo que pase dentor del bus
-// vamos al titulo component dentro de del componetne nueva tarea componente
+//Dentro de la instacia del bus = new Vue();
+export var bus = new Vue({
+  data: {
+    //se puede generar este ojb para compartir
+  },
+  methods: {
+    actualizarContador(numTareas) {
+      this.$emit('actualizarContador',numTareas);
+    }
+  }
+});
 
 new Vue({
   el: '#app',

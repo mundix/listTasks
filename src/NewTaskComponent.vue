@@ -31,14 +31,18 @@
           });
           // this.actualizarContador()
           // Sustituimos por el bus importado
-          bus.$emit("actualizarContador",this.tasks.length); //Emit es emitir, le pasamos el primer arguemnteo
+          // bus.$emit("actualizarContador",this.tasks.length); //Emit es emitir, le pasamos el primer arguemnteo
+          bus.actualizarContador(this.tasks.length); //metoo comun para importar
+
           //actualizarContador y el segunro es la longitud de la tarea, ahora solo falta escuchar el evento , dentro del evento titulo
         }
         this.newTask = '';
       }
     },
     created(){
-      bus.$emit("actualizarContador",this.tasks.length);
+      // bus.$emit("actualizarContador",this.tasks.length);
+      bus.actualizarContador(this.tasks.length); //metoo comun para importar
+
     }
   }
 </script>
