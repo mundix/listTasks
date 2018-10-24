@@ -1,6 +1,6 @@
 <template>
   <ul class="list-group">
-    <li v-for="(task,index) of tasks" class="list-group-item" v-bind:class="{finished: task.finished}">
+    <li v-for="(task,index) of tasks" v-bind:key="index" class="list-group-item" v-bind:class="{finished: task.finished}">
       {{task.text}}
       <span class="pull-right">
         <button type="button" class="btn btn-xs btn-success glyphicon glyphicon-ok" v-on:click="task.finished = !task.finished"></button>
