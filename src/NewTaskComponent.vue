@@ -19,15 +19,20 @@
     props: ['tasks'], //asi se recibe la variable enviada en v-on:tasks
     methods: {
       addNewTask() {
-        console.log("Add Task");
+
         var text = this.newTask.trim();
+
         if(text) {
           this.tasks.push({
             text: text,
             finished:false
-          }),
-          this.newTask = '';
+          });
+          // Este es el primer metood para pasar agumentos al padre
+          this.$emit('incrementarContador',1);
         }
+        this.newTask = '';
+        //if(text)
+
       }
     }
   }

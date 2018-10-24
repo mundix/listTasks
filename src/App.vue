@@ -2,11 +2,17 @@
   <div id="app" class="container">
    <div class="jumbotron">
      <!-- <titulo v-bind:titulo="titulo"></titulo> -->
-    <!-- <titulo :titulo="titulo"></titulo> -->
-    <titulo> </titulo>
+    <titulo :titulo="titulo"></titulo>
+     {{NumTareas}}
+    <!-- <titulo> </titulo> -->
     <!-- Sin pasar valor a titulo cogera el valor default en el componente -->
      <!-- <nueva-tarea v-bind:tasks="tasks"></nueva-tarea> -->
-     <nueva-tarea :tasks="tasks"></nueva-tarea>
+     <!-- incrementarContador="NumTareas+= $event" event es e segundo parametros al momento -->
+     <!-- this.$emit('incrementarContador',1); en este caso event es 1 -->
+     <nueva-tarea :tasks="tasks" v-on:incrementarContador="NumTareas+= $event"></nueva-tarea>
+    <!-- Hay otra forma  -->
+    <!-- <nueva-tarea :tasks="tasks" ></nueva-tarea> -->
+
      <lista-tareas :tasks="tasks"></lista-tareas>
    </div>
   </div>
@@ -29,9 +35,10 @@ export default {
   data() {
     return {
       titulo : "* Task List *",
+      NumTareas: 3,
       tasks : [
         {
-          text: 'Learn Vue.js',
+          text: 'Learn Vue js 2',
           finished: false
         },
         {
