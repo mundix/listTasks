@@ -2,8 +2,9 @@
   <div id="app" class="container">
    <div class="jumbotron">
      <!-- <titulo v-bind:titulo="titulo"></titulo> -->
-    <titulo :titulo="titulo"></titulo>
-     {{NumTareas}}
+<!-- <titulo :titulo="titulo"></titulo> -->
+     <!-- Ahora pasamos la variabloe NumTareas al componente  para pasarlo al componete  sigueinte -->
+    <titulo :titulo="titulo" :NumTareas="NumTareas"></titulo>
     <!-- <titulo> </titulo> -->
     <!-- Sin pasar valor a titulo cogera el valor default en el componente -->
      <!-- <nueva-tarea v-bind:tasks="tasks"></nueva-tarea> -->
@@ -13,6 +14,11 @@
     <!-- Hay otra forma  enviadole nuevaTarea coo una proiedad contador -->
     <nueva-tarea :tasks="tasks" :actualizarContador="actualizarContador"></nueva-tarea>
     <!-- y se agrga en la lista de props de neva tareas component -->
+
+    <!-- Ahora vamos a pasar variables o metodos entre hermos componentes digase desde
+    NuevaTareaComponente a ListaTareasComoennte  -->
+    <!-- Vamos a ponr el contador al lado del subtitulo Treas a hacer: 3 -->
+    <!-- No hay una forma directa, supuestamente  -->
 
 
      <lista-tareas :tasks="tasks"></lista-tareas>
