@@ -10,6 +10,9 @@
   </div>
 </template>
 <script>
+
+  // Importamos el bue
+  import {bus} from './main.js'; //acon esto importamos la variable bus
   export default {
     data() {
       return {
@@ -26,10 +29,16 @@
             text: text,
             finished:false
           });
-          this.actualizarContador()
+          // this.actualizarContador()
+          // Sustituimos por el bus importado
+          bus.$emit("actualizarContador",this.tasks.length); //Emit es emitir, le pasamos el primer arguemnteo
+          //actualizarContador y el segunro es la longitud de la tarea, ahora solo falta escuchar el evento , dentro del evento titulo
         }
         this.newTask = '';
       }
+    },
+    created(){
+      bus.$emit("actualizarContador",this.tasks.length);
     }
   }
 </script>
