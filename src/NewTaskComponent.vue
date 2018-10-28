@@ -43,8 +43,8 @@
         //url: https://tareas-444b3.firebaseio.com/ + tareas.json
         const urlFireBase  = 'https://tareas-444b3.firebaseio.com/tareas.json';
         this.$http.post(urlFireBase, {
-          texto: text,
-          terminada:false
+          text: text,
+          finished:false
           //Esto genera un Promise "then" , esto es asincronous por que es POST
         }).then(respuesta => console.log(respuesta));
       }
