@@ -11,6 +11,7 @@ Vue.use(VueResource);
 
 
 
+
 // Cramos un Bus como una instancia de Vue usando export
 
 //Dentro de la instacia del bus = new Vue();
