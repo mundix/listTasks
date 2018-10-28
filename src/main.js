@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+
+// const urlFireBase  = 'https://tareas-444b3.firebaseio.com/';
 // Vamos a usar una libreria de la DB para Vue PerformanceResourceTiming
 // https://github.com/pagekit/vue-resource
 // $ npm install vue-resource --save

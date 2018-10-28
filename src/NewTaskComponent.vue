@@ -37,6 +37,16 @@
           //actualizarContador y el segunro es la longitud de la tarea, ahora solo falta escuchar el evento , dentro del evento titulo
         }
         this.newTask = '';
+        //elementos de Vue Resource $http
+        //la direcion dentro de post desde firebase es la del proyecto
+        //Al final le agregamos un nodo , .json, en este caso tareas.json
+        //url: https://tareas-444b3.firebaseio.com/ + tareas.json
+        const urlFireBase  = 'https://tareas-444b3.firebaseio.com/tareas.json';
+        this.$http.post(urlFireBase, {
+          texto: text,
+          terminada:false
+          //Esto genera un Promise "then" , esto es asincronous por que es POST
+        }).then(respuesta => console.log(respuesta));
       }
     },
     created(){
