@@ -1,5 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
+// Vamos a usar una libreria de la DB para Vue PerformanceResourceTiming
+// https://github.com/pagekit/vue-resource
+// $ npm install vue-resource --save
+//--save guarda en nuestra dependencia la libreria
+// Usaremos firebase
+import VueResource from 'vue-resource';
+Vue.use(VueResource);
+
+
+
 
 // Cramos un Bus como una instancia de Vue usando export
 

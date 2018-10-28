@@ -2,12 +2,8 @@
   <div id="app" class="container">
    <div class="jumbotron">
       <titulo :titulo="titulo" ></titulo>
-      <!-- Borramos :NumTareas="NumTareas" -->
       <nueva-tarea :tasks="tasks" :actualizarContador="actualizarContador"></nueva-tarea>
       <lista-tareas :tasks="tasks"></lista-tareas>
-
-      <!-- Si la app es muy grande es dificil usd el metodo anterior ahora vmaos a usar algo llamad bus -->
-      <!-- como una nueva instancia de vue en  mail.js -->
    </div>
   </div>
 </template>
