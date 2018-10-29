@@ -52,15 +52,21 @@ export default {
       }
   },
   created(){
-    this.$http.get('https://tareas-444b3.firebaseio.com/tareas.json')
+    this.$http.get('tareas.json')
       .then(respuesta => {
         return respuesta.json();
       })
       .then(respuestaJson => {
         // console.log(respuestaJson)
         for(let id in respuestaJson) {
-          console.log(respuestaJson[id]);
-          this.tasks.push(respuestaJson[id])
+          // console.log(respuestaJson[id]);
+          //Esto es para cambiar el status
+          let tarea = {
+            id:id,
+            text: respuestaJson[id].text,
+            finished:respuestaJson[id].finished
+          }
+          this.tasks.push(tarea);
         }
       })
       ;

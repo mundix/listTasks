@@ -9,6 +9,8 @@ import App from './App.vue'
 // Usaremos firebase
 import VueResource from 'vue-resource';
 Vue.use(VueResource);
+// Vue.http.options.root = 'https://tareas-444b3.firebaseio.com/tareas.json';
+Vue.http.options.root = 'https://tareas-444b3.firebaseio.com/';
 
 
 
